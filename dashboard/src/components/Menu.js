@@ -110,7 +110,7 @@ const Menu = () => {
               <p>Keyboard shortcuts</p>
               <p>Help</p>
               <a
-                href="http://localhost:3005"
+                href="https://aconova.onrender.com"
                 style={{ textDecoration: "none", color: "red" }}
               >
                 Logout
