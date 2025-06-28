@@ -21,7 +21,7 @@ const Signup = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("https://aconova.onrender.com", {
+      const res = await fetch("http://localhost:3002/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -29,7 +29,7 @@ const Signup = () => {
 
       const data = await res.json();
 
-      
+
 
       if (res.status === 200) {
         alert("Login successful!");

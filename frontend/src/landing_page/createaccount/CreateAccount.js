@@ -18,7 +18,7 @@ const AconovaSignupModal = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://aconova.onrender.com', formData);
+      const response = await axios.post('http://localhost:3002/api/createaccount', formData);
       alert(response.data.message); // Show success message
       navigate('/'); // Redirect to home or login page after signup
     } catch (error) {
