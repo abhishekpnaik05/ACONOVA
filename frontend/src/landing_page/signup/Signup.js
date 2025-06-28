@@ -29,8 +29,6 @@ const Signup = () => {
 
       const data = await res.json();
 
-
-
       if (res.status === 200) {
         alert("Login successful!");
 
