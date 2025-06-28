@@ -48,7 +48,7 @@ const Signup = () => {
   };
 
   const handleClose = () => {
-    window.location.href = 'http://localhost:3005';
+    window.location.href = 'https://aconova.onrender.com';
   };
 
   const styles = {
