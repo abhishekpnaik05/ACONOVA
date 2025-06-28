@@ -37,7 +37,7 @@ const Signup = () => {
         const email = encodeURIComponent(data.user.email);
 
         // ✅ Redirect to dashboard with user info in URL
-        window.location.href = `http://localhost:3003?name=${name}&email=${email}`;
+        window.location.href = `https://aconova-dashboard.onrender.com?name=${name}&email=${email}`;
       } else {
         alert(data.error || "Login failed");
       }
