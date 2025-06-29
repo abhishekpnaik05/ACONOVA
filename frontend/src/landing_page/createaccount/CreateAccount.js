@@ -24,7 +24,7 @@ const AconovaSignupModal = () => {
     );
     
     alert('Account created successfully! Please login.');
-    navigate('/login'); // Redirect to login page explicitly
+    navigate('/signup'); // Redirect to login page explicitly
     
   } catch (error) {
     const errorMessage = error.response?.data?.error || 
