@@ -114,6 +114,10 @@ app.get("/", (req, res) => {
   res.send("Backend is running! 🚀");
 });
 
+app.get("/api/login", (req, res) => {
+  res.send("Use POST to log in (send email + password in JSON body).");
+});
+
 mongoose.connect(uri).then(() => {
   console.log("DB connected!");
   app.listen(PORT, () => {
