@@ -15,16 +15,31 @@ const AconovaSignupModal = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('https://aconova-backend1.onrender.com/api/createaccount', formData);
-      alert(response.data.message); // Show success message
-      navigate('/'); // Redirect to home or login page after signup
-    } catch (error) {
-      alert(error.response?.data?.error || 'Login failed');
-    }
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post(
+      'https://aconova-backend1.onrender.com/api/createaccount', 
+      formData
+    );
+    
+    alert('Account created successfully! Please login.');
+    navigate('/login'); // Redirect to login page explicitly
+    
+  } catch (error) {
+    const errorMessage = error.response?.data?.error || 
+                        error.message || 
+                        'Signup failed. Please try again.';
+    alert(errorMessage);
+    
+    // Log detailed error for debugging
+    console.error('Signup error:', {
+      error: error.response?.data,
+      status: error.response?.status,
+      config: error.config
+    });
+  }
+};
 
   const handleClose = () => {
     navigate('/');
