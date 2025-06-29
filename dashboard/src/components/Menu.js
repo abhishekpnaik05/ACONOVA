@@ -138,6 +138,51 @@ const Menu = () => {
         </div>
       )}
 
+      {isMobile && (
+        <div className="profile" onClick={handleProfileClick} style={{ position: "relative", cursor: "pointer", }}>
+              <div className="avatar">{userInitial}</div>
+              <p className="username">{userName}</p>
+              {isProfileDropdownOpen && (
+                <div
+                  ref={dropdownRef}
+                  className="profile-dropdown"
+                  style={{
+                    position: "absolute",
+                    top: "60px",
+                    right: "0px",
+                    backgroundColor: "white",
+                    border: "1px solid #ddd",
+                    borderRadius: "5px",
+                    padding: "10px 15px",
+                    boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
+                    width: "220px",
+                    zIndex: 1000,
+                    // display: "flex",
+                    // flexDirection: "column",
+                    // alignItems: "flex-end",
+
+                  }}
+                >
+                  <p><strong>{userName}</strong></p>
+                  <p style={{ fontSize: "12px", color: "#888" }}>{userEmail}</p>
+                  <p>My profile / Settings</p>
+                  <p>Console</p>
+                  <p>Coin</p>
+                  <p>Support</p>
+                  <p>Invite friends</p>
+                  <hr />
+                  <p>Tour Kite</p>
+                  <p>Keyboard shortcuts</p>
+                  <p>Help</p>
+                  <a href="https://aconova.onrender.com" style={{ textDecoration: "none", color: "red" }}>
+                    Logout
+                  </a>
+                </div>
+              )}
+        </div>
+      )}
+
+
       {/* Mobile Bottom Menu */}
       {isMobile && !showWatchlist && (
         <div
