@@ -12,6 +12,21 @@ code {
     monospace;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px; /* space for fixed mobile bottom nav */
+  box-sizing: border-box;
+}
+
 .dashboard-container {
   width: 100%;
   height: 90vh;
