@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Apps from "./Apps";
 import Funds from "./Funds";
 import Holdings from "./Holdings";
@@ -14,21 +13,19 @@ const Dashboard = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container" style={{ display: "flex", flexDirection: isMobile ? "column" : "row" }}>
       <GeneralContextProvider>
-        {/* ✅ Only show WatchList on desktop */}
+        {/* ✅ Show WatchList on left only for desktop */}
         {!isMobile && <WatchList />}
 
-        <div className="content">
+        {/* ✅ Full width for mobile */}
+        <div className="content" style={{ flex: 1, width: isMobile ? "100%" : "auto" }}>
           <Routes>
             <Route exact path="/" element={<Summary />} />
             <Route path="/orders" element={<Orders />} />

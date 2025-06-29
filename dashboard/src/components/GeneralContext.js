@@ -14,16 +14,7 @@ export const GeneralContextProvider = (props) => {
   const [selectedStockUID, setSelectedStockUID] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const handleOpenBuyWindow = (uid) => {
-    setSelectedStockUID(uid); // ✅ Always update selected UID
-    setIsBuyWindowOpen(true);
-  };
-
-  const handleCloseBuyWindow = () => {
-    setIsBuyWindowOpen(false);
-    setSelectedStockUID("");
-  };
-
+  // ✅ Detect screen size change to update `isMobile`
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -32,6 +23,17 @@ export const GeneralContextProvider = (props) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // ✅ Open/Close functions
+  const handleOpenBuyWindow = (uid) => {
+    setSelectedStockUID(uid); // Always update the current stock UID
+    setIsBuyWindowOpen(true);
+  };
+
+  const handleCloseBuyWindow = () => {
+    setIsBuyWindowOpen(false);
+    setSelectedStockUID("");
+  };
 
   return (
     <GeneralContext.Provider
@@ -44,9 +46,12 @@ export const GeneralContextProvider = (props) => {
       }}
     >
       {props.children}
-      {/* Show globally for desktop */}
+
+      {/* ✅ Desktop only: Global BuyActionWindow rendering */}
       {!isMobile && isBuyWindowOpen && selectedStockUID && (
-        <BuyActionWindow uid={selectedStockUID} />
+        <div style={{ position: "absolute", top: "80px", right: "40px", zIndex: 1000 }}>
+          <BuyActionWindow uid={selectedStockUID} />
+        </div>
       )}
     </GeneralContext.Provider>
   );
