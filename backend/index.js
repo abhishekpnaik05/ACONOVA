@@ -110,6 +110,9 @@ app.post("/newOrder", async (req, res) => {
 // ---------------------------------------------------
 
 
+app.get("/", (req, res) => {
+  res.send("Backend is running! 🚀");
+});
 
 mongoose.connect(uri).then(() => {
   console.log("DB connected!");
