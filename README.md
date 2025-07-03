@@ -85,14 +85,18 @@ aconova/
 | POST   | /newOrder          | Submit Buy/Sell order                |
 | GET    | /orders/:userId    | Fetch orders placed by a user        |
 
-### 🔐 Example: User Signup Payload
+---
+
+## 🔐 Example: User Signup Payload
 
 {
   "email": "user@example.com",
   "password": "password"
 }
 
-### 🛒 Example: Order Payload
+---
+
+## 🛒 Example: Order Payload
 
 {
   "name": "INFY",
@@ -100,6 +104,8 @@ aconova/
   "price": 1520,
   "mode": "BUY"
 }
+
+---
 
 ## 🧑‍💼 User Flow
 
@@ -129,7 +135,9 @@ aconova/
   "createdAt": "2025-07-03T12:45:00Z"
 }
 
-### 🔧 How to Run Locally
+---
+
+## 🔧 How to Run Locally
 
 ### 1. Clone the Repository
 
@@ -159,7 +167,9 @@ npm start
 npm run dev
 Now open http://localhost:3000
 
-### 🌍 Deployment
+---
+
+## 🌍 Deployment
 
 ### Platform	Purpose                URL
 Render	      Frontend (React)       https://aconova.onrender.com
@@ -167,7 +177,9 @@ Render 	      Backend (Node.js)      https://aconova-backend1.onrender.com
 Render        Dashboard              https://aconova-dashboard.onrender.com
 MongoDB     	Database (cloud)
 
-### 🔮 Future Enhancements
+---
+
+## 🔮 Future Enhancements
 
 ✅ Sell order support
 
@@ -183,7 +195,9 @@ MongoDB     	Database (cloud)
 
 📎 PDF invoice generation per order
 
-### 👨‍💻 Author
+---
+
+## 👨‍💻 Author
 
 Abhishek P.
 React Developer | Full Stack Developer | 
@@ -194,7 +208,9 @@ React Developer | Full Stack Developer |
 
 **Email**: abhishekpnaik05@gmail.com
 
-### 📄 License
+---
+
+## 📄 License
 
 This project is licensed under the MIT License.
 
