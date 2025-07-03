@@ -1,3 +1,5 @@
+// ✅ FINAL FIXED CODE: WatchList.js
+
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
@@ -69,17 +71,24 @@ const WatchList = () => {
           <WatchListItem
             key={index}
             stock={stock}
-            isActive={activeStockUID === stock.name}
-            setActiveStockUID={setActiveStockUID}
             isMobile={isMobile}
+            showBuyWindow={isMobile && isBuyWindowOpen && selectedStockUID === stock.name}
           />
         ))}
       </ul>
 
       <DoughnutChart data={data} />
 
-      {isMobile && isBuyWindowOpen && selectedStockUID && (
-        <div style={{ position: "fixed", bottom: "70px", width: "100%", zIndex: 1000 }}>
+      {/* Desktop floating Buy window */}
+      {!isMobile && isBuyWindowOpen && selectedStockUID && (
+        <div
+          style={{
+            position: "fixed",
+            bottom: "70px",
+            width: "100%",
+            zIndex: 1000,
+          }}
+        >
           <BuyActionWindow uid={selectedStockUID} />
         </div>
       )}
@@ -89,12 +98,13 @@ const WatchList = () => {
 
 export default WatchList;
 
-const WatchListItem = ({ stock, isActive, setActiveStockUID, isMobile }) => {
+const WatchListItem = ({ stock, isMobile, showBuyWindow }) => {
   const [hovered, setHovered] = useState(false);
+  const generalContext = useContext(GeneralContext);
 
   const handleClick = () => {
     if (isMobile) {
-      setActiveStockUID(stock.name); // Set active for mobile on tap
+      generalContext.openBuyWindow(stock.name);
     }
   };
 
@@ -103,6 +113,7 @@ const WatchListItem = ({ stock, isActive, setActiveStockUID, isMobile }) => {
       onMouseEnter={() => !isMobile && setHovered(true)}
       onMouseLeave={() => !isMobile && setHovered(false)}
       onClick={handleClick}
+      className="watchlist-item"
     >
       <div className="item">
         <p className={stock.isDown ? "down" : "up"}>{stock.name}</p>
@@ -116,10 +127,19 @@ const WatchListItem = ({ stock, isActive, setActiveStockUID, isMobile }) => {
           <span className="price">{stock.price}</span>
         </div>
       </div>
-      {(hovered || isActive) && <WatchListActions uid={stock.name} />}
+
+      {(hovered || isMobile) && <WatchListActions uid={stock.name} />}
+
+      {/* ✅ Inline mobile buy window */}
+      {showBuyWindow && (
+        <div className="mobile-buy-window">
+          <BuyActionWindow uid={stock.name} />
+        </div>
+      )}
     </li>
   );
 };
+
 
 const WatchListActions = ({ uid }) => {
   const generalContext = useContext(GeneralContext);
