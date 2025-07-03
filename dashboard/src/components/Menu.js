@@ -120,13 +120,10 @@ const Menu = () => {
                   <p><strong>{userName}</strong></p>
                   <p style={{ fontSize: "12px", color: "#888" }}>{userEmail}</p>
                   <p>My profile / Settings</p>
-                  <p>Console</p>
-                  <p>Coin</p>
+                  
                   <p>Support</p>
                   <p>Invite friends</p>
-                  <hr />
-                  <p>Tour Kite</p>
-                  <p>Keyboard shortcuts</p>
+                
                   <p>Help</p>
                   <a href="https://aconova.onrender.com" style={{ textDecoration: "none", color: "red" }}>
                     Logout
