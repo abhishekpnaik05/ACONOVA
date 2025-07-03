@@ -141,14 +141,14 @@ aconova/
 
 ### 1. Clone the Repository
 
-git clone https://github.com/yourusername/aconova.git
+git clone https://github.com/abhishekpnaik05/ACONOVA.git
 cd aconova
 
 ### 2. Install Dependencies
 
 ### Backend
 
-cd server
+cd backend
 npm install
 
 ### Frontend
