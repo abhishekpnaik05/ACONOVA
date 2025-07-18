@@ -3,6 +3,11 @@
 **Aconova** is a sleek and responsive stock market dashboard built using the MERN stack (MongoDB, Express, React, Node.js).  
 It offers a fresh, intuitive platform where users can create accounts, track live stock data, and place Buy/Sell orders — all seamlessly managed and stored in MongoDB.
 
+![MERN Stack](https://img.shields.io/badge/Stack-MERN-00D8FF?style=for-the-badge&logo=mongodb&logoColor=white)
+![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
 ---
 
 ## 📖 Introduction
@@ -22,36 +27,65 @@ Inspired by platforms like Zerodha, Groww, and Kite, Aconova is designed for:
 
 ---
 
-## 🚀 Features
+## 🛠 Tech Stack
 
-- 📊 Real-time market watchlist with prices and trend icons  
-- 📉 Doughnut chart for stock data visualization  
-- 🛒 Intuitive Buy/Sell order windows (mobile + desktop)  
-- 🔐 Secure Sign Up / Login with JWT & bcrypt  
-- 💾 Order history stored in MongoDB  
-- 📱 Fully responsive user interface  
-- 🌐 RESTful APIs for order and user management
+### Frontend
+| Technology | Version | Purpose | Documentation |
+|------------|---------|---------|---------------|
+| ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react) | 18.2.0 | UI Framework | [React Docs](https://reactjs.org/docs/getting-started.html) |
+| ![React Router](https://img.shields.io/badge/React_Router-6.14.2-CA4245?logo=reactrouter) | 6.14.2 | Client-side Routing | [React Router Docs](https://reactrouter.com/) |
+| ![Axios](https://img.shields.io/badge/Axios-1.4.0-5A29E4?logo=axios) | 1.4.0 | HTTP Client | [Axios Docs](https://axios-http.com/) |
+| ![Chart.js](https://img.shields.io/badge/Chart.js-4.3.0-FF6384?logo=chartdotjs) | 4.3.0 | Data Visualization | [Chart.js Docs](https://www.chartjs.org/) |
+| ![Material UI Icons](https://img.shields.io/badge/MUI_Icons-5.14.10-007FFF?logo=mui) | 5.14.10 | Icon Library | [MUI Icons Docs](https://mui.com/material-ui/material-icons/) |
+| ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.1-7952B3?logo=bootstrap) | 5.3.1 | CSS Framework | [Bootstrap Docs](https://getbootstrap.com/) |
+
+### Backend
+| Technology | Version | Purpose | Documentation |
+|------------|---------|---------|---------------|
+| ![Node.js](https://img.shields.io/badge/Node.js-18.16.0-339933?logo=nodedotjs) | 18.16.0 | Runtime Environment | [Node.js Docs](https://nodejs.org/en/docs) |
+| ![Express](https://img.shields.io/badge/Express-4.18.2-000000?logo=express) | 4.18.2 | Web Framework | [Express Docs](https://expressjs.com/) |
+| ![JWT](https://img.shields.io/badge/JWT-9.0.1-000000?logo=jsonwebtokens) | 9.0.1 | Authentication | [JWT Docs](https://jwt.io/) |
+| ![bcrypt.js](https://img.shields.io/badge/bcrypt.js-2.4.3-00D8FF?logo=bcrypt) | 2.4.3 | Password Hashing | [bcrypt.js Docs](https://www.npmjs.com/package/bcryptjs) |
+| ![CORS](https://img.shields.io/badge/CORS-2.8.5-000000?logo=cors) | 2.8.5 | Cross-Origin Resource Sharing | [CORS Docs](https://expressjs.com/en/resources/middleware/cors.html) |
+
+### Database
+| Technology | Version | Purpose | Documentation |
+|------------|---------|---------|---------------|
+| ![MongoDB Atlas](https://img.shields.io/badge/MongoDB_Atlas-6.0-47A248?logo=mongodb) | 6.0 | Cloud Database | [MongoDB Atlas Docs](https://www.mongodb.com/docs/atlas/) |
+| ![Mongoose](https://img.shields.io/badge/Mongoose-7.5.3-880000?logo=mongoose) | 7.5.3 | ODM Library | [Mongoose Docs](https://mongoosejs.com/) |
+| ![Dotenv](https://img.shields.io/badge/dotenv-16.3.1-ECD53F?logo=dotenv) | 16.3.1 | Environment Variables | [Dotenv Docs](https://www.npmjs.com/package/dotenv) |
 
 ---
 
-## 🧰 Tech Stack
+## ✨ Features
 
-### Frontend
-- React.js
-- React Router DOM
-- Axios
-- Chart.js (Doughnut chart)
-- Material UI Icons
+### Core Functionality
+- **User Authentication**
+  - Secure JWT token-based authentication
+  - Password hashing with bcrypt.js
+  - Protected routes for authenticated users only
 
-### Backend
-- Node.js
-- Express.js
-- JWT Authentication
-- bcrypt.js (Password hashing)
+### Trading Features
+- **Stock Watchlist**
+  - Real-time price updates (mock data)
+  - Percentage change indicators
+  - Color-coded trend visualization
 
-### Database
-- MongoDB Atlas
-- Mongoose ODM
+### Data Management
+- **Order System**
+  - Buy/Sell order placement
+  - Order validation
+  - Transaction history storage
+
+### UI/UX
+- **Responsive Design**
+  - Mobile-first approach
+  - Adaptive layouts for all screen sizes
+- **Data Visualization**
+  - Interactive charts with Chart.js
+  - Clean, intuitive dashboard
+
+---
 
 ---
 
@@ -202,11 +236,27 @@ MongoDB     	Database (cloud)
 Abhishek P.
 React Developer | Full Stack Developer | 
 
-**GitHub**: https://github.com/abhishekpnaik05
+## 📬 Connect With Me
 
-**LinkedIn**: www.linkedin.com/in/abhishekpnaik
+<div align="center">
+  <a href="https://github.com/abhishekpnaik05" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/abhishekpnaik" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:abhishekpnaik05@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="https://abhishek-p-portfolio.onrender.com" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
+  </a>
+</div>
 
-**Email**: abhishekpnaik05@gmail.com
+<div align="center" style="margin-top: 20px;">
+  <img src="https://github-readme-stats.vercel.app/api?username=abhishekpnaik05&show_icons=true&theme=radical" alt="GitHub Stats" width="400">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhishekpnaik05&layout=compact&theme=radical" alt="Top Languages" width="300">
+</div>
 
 ---
 
