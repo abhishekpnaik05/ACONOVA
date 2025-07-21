@@ -87,26 +87,26 @@ Inspired by platforms like Zerodha, Groww, and Kite, Aconova is designed for:
 
 ---
 
----
-
 ## 📁 Project Structure
 
+```
 aconova/
-├── frontend/ # React frontend
-│ ├── components/ # Login, Signup, Dashboard 
-│ ├── data/
-│ └── index.js
-├── dashboard/ 
-│ ├── components/ (WatchList, BuyActionWindow, etc.)
-│ ├── App.js
-│ └── index.js
-├── server/ # node + MongoDB backend
-│ ├── routes/ # Auth and Order APIs
-│ ├── models/ # Mongoose schemas for User, Order
-│ ├── schemas/ 
-│ └── index.js # Server entry point
-├── .env # Environment variables
+├── frontend/                # React frontend
+│   ├── components/          # Login, Signup, Dashboard 
+│   ├── data/
+│   └── index.js
+├── dashboard/              
+│   ├── components/          # WatchList, BuyActionWindow, etc.
+│   ├── App.js
+│   └── index.js
+├── server/                 # Node + MongoDB backend
+│   ├── routes/             # Auth and Order APIs
+│   ├── models/             # Mongoose schemas for User, Order
+│   ├── schemas/            
+│   └── index.js            # Server entry point
+├── .env                    # Environment variables
 └── README.md
+```
 
 ---
 
@@ -123,21 +123,25 @@ aconova/
 
 ## 🔐 Example: User Signup Payload
 
+```json
 {
   "email": "user@example.com",
   "password": "password"
 }
+```
 
 ---
 
 ## 🛒 Example: Order Payload
 
+```json
 {
   "name": "INFY",
   "qty": 5,
   "price": 1520,
   "mode": "BUY"
 }
+```
 
 ---
 
@@ -160,6 +164,7 @@ aconova/
 
 ### 💾 4. Order Storage Format (MongoDB)
 
+```json
 {
   "userId": "64e19f98ab12345678cfa12b",
   "name": "RELIANCE",
@@ -168,6 +173,7 @@ aconova/
   "mode": "BUY",
   "createdAt": "2025-07-03T12:45:00Z"
 }
+```
 
 ---
 
@@ -175,66 +181,68 @@ aconova/
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/abhishekpnaik05/ACONOVA.git
 cd aconova
+```
 
 ### 2. Install Dependencies
 
-### Backend
-
+**Backend:**
+```bash
 cd backend
 npm install
+```
 
-### Frontend
-
+**Frontend:**
+```bash
 cd ../frontend
 npm install
+```
 
 ### 3. Start the Development Servers
 
-### Start Backend
-
+**Start Backend:**
+```bash
 npm start
+```
 
-### Start Frontend
-
+**Start Frontend:**
+```bash
 npm run dev
-Now open http://localhost:3000
+```
+
+Now open [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 🌍 Deployment
 
-### Platform	Purpose                URL
-Render	      Frontend (React)       https://aconova.onrender.com
-Render 	      Backend (Node.js)      https://aconova-backend1.onrender.com
-Render        Dashboard              https://aconova-dashboard.onrender.com
-MongoDB     	Database (cloud)
+| Platform | Purpose | URL |
+|----------|---------|-----|
+| Render | Frontend (React) | https://aconova.onrender.com |
+| Render | Backend (Node.js) | https://aconova-backend1.onrender.com |
+| Render | Dashboard | https://aconova-dashboard.onrender.com |
+| MongoDB Atlas | Database (cloud) | - |
 
 ---
 
 ## 🔮 Future Enhancements
 
-✅ Sell order support
-
-✅ Order history tab
-
-🔄 Real-time price updates via WebSockets
-
-📊 Portfolio performance graph
-
-📧 Email confirmations after each trade
-
-🔐 Forgot password / Reset email flow
-
-📎 PDF invoice generation per order
+✅ Sell order support  
+✅ Order history tab  
+🔄 Real-time price updates via WebSockets  
+📊 Portfolio performance graph  
+📧 Email confirmations after each trade  
+🔐 Forgot password / Reset email flow  
+📎 PDF invoice generation per order  
 
 ---
 
 ## 👨‍💻 Author
 
-Abhishek P.
-React Developer | Full Stack Developer | 
+**Abhishek P.**  
+React Developer | Full Stack Developer
 
 ## 📬 Connect With Me
 
@@ -263,5 +271,7 @@ React Developer | Full Stack Developer |
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+---
 
 Made with 💙 using **React**, **Node.js**, **Express**, and **MongoDB** — for traders, learners, and builders alike.
